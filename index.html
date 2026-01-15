@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>Password Generator</header>
+    <main class="container">
+        <section class="generated-pass">
+            <label for="password">
+                <input type="text" id="password" readonly>
+                <img src="image/icon-copy.svg" alt="Copy Icon">
+            </label>
+        </section>
+
+        <section class="password-settings">
+                <div class="setting">
+                    <label for="length">Character Length</label>
+                    <input type="number" id="length" min="4" max="20" value="10">
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="include-uppercase" checked>
+                    <label for="include-uppercase">Include Uppercase Letters</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="include-lowercase" checked>
+                    <label for="include-lowercase">Include Lowercase Letters</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="include-numbers" checked>
+                    <label for="include-numbers">Include Numbers</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="include-symbols" >
+                    <label for="include-symbols">Include Symbols</label>
+                </div>
+
+                <label for="password-strength">
+                    <input type="text" id="password-strength" readonly placeholder=" STRENGHT">
+                </label>
+
+                <button id="generatButton" class="generate-btn">Generate Password <img src="image/icon-arrow-right.svg" alt="Arrow Icon"></button>
+        </section>
+    </main>
+</body>
+</html>
