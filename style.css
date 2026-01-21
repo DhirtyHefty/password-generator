@@ -45,6 +45,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
+    gap: 16px;
 }
 
 .password-text {
@@ -52,6 +53,11 @@ h1 {
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
 }
 
 .copy-button {
@@ -62,6 +68,7 @@ h1 {
     display: flex;
     align-items: center;
     transition: opacity 0.3s;
+    flex-shrink: 0;
 }
 
 .copy-button:hover svg path {
@@ -186,6 +193,8 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .strength-label {
@@ -200,6 +209,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .strength-text {
@@ -246,4 +256,63 @@ h1 {
 .generate-button:hover {
     background: transparent;
     color: var(--accent-green);
+}
+
+@media (max-width: 768px ){
+    .password-text{
+        font-size: 24px ;
+    }
+    
+    .password-display{
+        padding: 16px 20px;
+    }
+
+    .container{
+        padding: 24px;
+    }
+
+    .strength-section{
+        padding: 16px 20px;
+    }
+
+    .strength-label{
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .strength-text{
+        font-size: 18px;
+    }
+
+    .strength-bar{
+        width: 8px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .password-text {
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 18px;
+    }
+
+    .strength-text{
+        font-size: 16px;
+    }
+
+    .length-header span{
+        font-size: 24px;
+    }
+
+    .length-value{
+        font-size: 24px;
+    }
+
+    .checkbox-item label{
+        font-size:  16px;
+    }
 }
